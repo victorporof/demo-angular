@@ -1,3 +1,18 @@
+# Introduction
+
+This is the demo built to showcase the Chrome DevTools debugging support for the modern web. You can open this demo live or learn more with the following resources.
+
+Learn more
+- [Modern web debugging in Chrome DevTools](https://developer.chrome.com/blog/devtools-modern-web-debugging/)
+- [Case Study: Better Angular Debugging with DevTools](https://developer.chrome.com/blog/devtools-better-angular-debugging/)
+
+Live demo
+- demo: https://ng-devtools.netlify.app/ 
+- demo with code edit with StackBlitz
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/victorporof/demo-angular)
+
+
 # DemoAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
