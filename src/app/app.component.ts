@@ -20,8 +20,14 @@ export class AppComponent {
 
   async increment() {
     await Promise.resolve().then(() => timeout(100));
-    const x = await (await fetch('/random-number')).text();
+    
+    const numRes = await fetch('/random-number').then(n => { 
+      if(n.status === 404) throw new Error('wrong url');
+      return n;
+     });
+    const x = await numRes.text().catch((err: any) => {throw err});
     this.counter = this.counter + (+x || 1);
+    
     // console.trace('incremented');
   }
 
