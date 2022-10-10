@@ -7,6 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LabelComponent implements OnInit {
   @Input() counter = 0;
+  
+  public get isNegeative() : boolean {
+    return this.counter < 0;
+  }
+  
 
   constructor() {}
 
