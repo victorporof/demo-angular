@@ -6,29 +6,35 @@ function timeout(ms: number) {
 
 @Component({
   selector: 'app-root',
-  template: `
-  <section>
+  template: ` <section>
     <app-button label="-" (handleClick)="decrement()"></app-button>
     <app-label [counter]="counter"></app-label>
     <app-button label="+" (handleClick)="increment()"></app-button>
   </section>`,
   styleUrls: ['./app.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
   counter = 0;
 
   async increment() {
     await Promise.resolve().then(() => timeout(100));
-    
-    const numRes = await fetch('/random-number').then(n => { 
-      if(n.status === 404) throw new Error('wrong url');
-      return n;
-     });
-    const x = await numRes.text().catch((err: any) => {throw err});
-    this.counter = this.counter + (+x || 1);
-    
-    // console.trace('incremented');
+
+    let x;
+
+    try {
+      const numRes = await fetch('/random-number').then((n) => {
+        if (n.status === 404) throw new Error('wrong url');
+        return n;
+      });
+
+      x = await numRes.text().catch((err: any) => {
+        throw err;
+      });
+    } finally {
+      this.counter = this.counter + +(x || 1);
+      // console.trace('incremented');
+    }
   }
 
   async decrement() {
