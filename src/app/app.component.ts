@@ -10,7 +10,8 @@ function timeout(ms: number) {
     <app-button label="-" (handleClick)="decrement()"></app-button>
     <app-label [counter]="counter"></app-label>
     <app-button label="+" (handleClick)="increment()"></app-button>
-  </section>`,
+  </section>
+  <a href="https://github.com/victorporof/demo-angular">GitHub</a>`,
   styleUrls: ['./app.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
