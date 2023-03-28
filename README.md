@@ -10,7 +10,7 @@ Live demo
 - demo: https://ng-devtools.netlify.app/ 
 - demo with code edit with StackBlitz
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/victorporof/demo-angular)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/jecfish/ng-counter)
 
 
 # DemoAngular
